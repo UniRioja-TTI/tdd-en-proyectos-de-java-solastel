@@ -31,3 +31,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
           force_orphan: true
+
+      - name: Upload Javadoc artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: javadoc
+          path: ./docs
